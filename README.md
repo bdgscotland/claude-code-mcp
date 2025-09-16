@@ -7,6 +7,8 @@ claude mcp add --transport sse context7 https://mcp.context7.com/sse
 claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena start-mcp-server --context ide-assistant --project $(pwd)
 claude mcp add sequential-thinking -s local -- npx -y @modelcontextprotocol/server-sequential-thinking
 claude mcp add playwright npx '@playwright/mcp@latest'
+git clone https://github.com/modelcontextprotocol/superdesign-mcp-claude-code.git && cd superdesign-mcp-claude-code && npm install && npm run build && cd .. && claude mcp add superdesign "node"
+  "$(pwd)/superdesign-mcp-claude-code/dist/index.js"
 ```
 
 ## Slash Commands
