@@ -9,6 +9,7 @@ claude mcp add sequential-thinking -s local -- npx -y @modelcontextprotocol/serv
 claude mcp add playwright npx '@playwright/mcp@latest'
 git clone https://github.com/modelcontextprotocol/superdesign-mcp-claude-code.git && cd superdesign-mcp-claude-code && npm install && npm run build && cd .. && claude mcp add superdesign "node"
   "$(pwd)/superdesign-mcp-claude-code/dist/index.js"
+claude mcp add docling -- uvx --from docling-mcp docling-mcp-server
 ```
 
 ## Slash Commands
